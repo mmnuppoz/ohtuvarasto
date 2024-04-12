@@ -66,10 +66,10 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 10)
 
     def test_tulostus(self):
-        self.varasto.lisaa_varastoon(8)
-        self.assertAlmostEqual(self.varasto.saldo, 8)
-        self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 2)
-        tulostus= "saldo = 8, vielä tilaa 2"
+        self.varasto.lisaa_varastoon(10)
+        self.assertAlmostEqual(self.varasto.saldo, 10)
+        self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 0)
+        tulostus= "saldo = 10, vielä tilaa 0"
 
         self.assertAlmostEqual(str(self.varasto), tulostus)
 
